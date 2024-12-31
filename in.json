@@ -1,0 +1,134 @@
+{
+  "name": "mr-rofessor",
+  "type": "WEB",
+  "strategy": {
+    "type": "DEPLOYMENT_STRATEGY_TYPE_ROLLING"
+  },
+  "routes": [
+    {
+      "port": 8000,
+      "path": "/"
+    }
+  ],
+  "ports": [
+    {
+      "port": 8000,
+      "protocol": "http"
+    }
+  ],
+  "env": [
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "BOT_TOKEN",
+      "value": "7407049631:AAHK41c3epS0371V0Zm__DnKzCA69S5swXo"
+    },
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "API_ID",
+      "value": "28508314"
+    },
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "API_HASH",
+      "value": "a995bad8afd4f0898a786e0b045e8a8a"
+    },
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "CHANNELS",
+      "value": "-1002342609008"
+    },
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "ADMINS",
+      "value": "-6982616937"
+    },
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "DATABASE_NAME",
+      "value": "mongodb+srv://maazshaik86:maazshaik86@babu.9qehs.mongodb.net/?retryWrites=true&w=majority&appName=Babu"
+    },
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "DATABASE_URL",
+      "value": "mongodb+srv://maazshaik86:maazshaik86@babu.9qehs.mongodb.net/?retryWrites=true&w=majority&appName=Babu"
+    },
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "LOG_CHANNEL",
+      "value": "-1002346331738"
+    },
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "key": "WEBHOOK",
+      "value": "True"
+    }
+  ],
+  "regions": [
+    "fra"
+  ],
+  "scalings": [
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "min": 1,
+      "max": 1,
+      "targets": []
+    }
+  ],
+  "instance_types": [
+    {
+      "scopes": [
+        "region:fra"
+      ],
+      "type": "free"
+    }
+  ],
+  "health_checks": [
+    {
+      "grace_period": 5,
+      "interval": 30,
+      "restart_limit": 3,
+      "timeout": 5,
+      "tcp": {
+        "port": 8000
+      }
+    }
+  ],
+  "volumes": [],
+  "file_mounts": [],
+  "skip_cache": false,
+  "git": {
+    "repository": "github.com/MrMKN/PROFESSOR-BOT",
+    "branch": "main",
+    "tag": "",
+    "sha": "",
+    "build_command": "",
+    "run_command": "",
+    "no_deploy_on_push": false,
+    "workdir": "",
+    "buildpack": {
+      "build_command": "",
+      "run_command": "",
+      "privileged": false
+    }
+  }
+}
