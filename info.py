@@ -26,12 +26,12 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://maazshaik86:maazshaik86@babu.9qehs.mongodb.net/?retryWrites=true&w=majority&appName=Babu")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Babu")
+DATABASE_NAME = environ.get('DATABASE_NAME', "babu")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 #----------- There will be channel id add in all these ---------
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '0'))  
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002346331738'))  
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL','0'))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','0'))
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '0'))
